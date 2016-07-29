@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/Java EE"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/Java EE http://java.sun.com/xml/ns/Java EE/web-app_3_0.xsd">
+
+	<display-name>srdz</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml,classpath*:spring-*.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>imagePath</param-name>
+		<param-value>uploads/image</param-value>
+	</context-param>
+	<context-param>
+		<param-name>newsPath</param-name>
+		<param-value>/uploads/news</param-value>
+	</context-param>
+	<context-param>
+		<param-name>qrcodePath</param-name>
+		<param-value>/uploads/qrcode</param-value>
+	</context-param>
+	<context-param>
+		<param-name>uploadPath</param-name>
+		<param-value>uploads</param-value>
+	</context-param>
+	<context-param>
+		<param-name>webPath</param-name>
+		<param-value>http://www.51xiangshiguang.com/srdz</param-value>
+	</context-param>
+	<mime-mapping>
+		<extension>txt</extension>
+		<mime-type>application/txt</mime-type>
+	</mime-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+</web-app>
